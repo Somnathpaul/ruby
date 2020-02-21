@@ -29,3 +29,4 @@ p fullname.size
 
 # Ruby object documentation can be found here:
 # https://ruby-doc.org/core-2.7.0/Object.html#method-i-class
+p fullname.methods # gives out all the methods avilable in ruby objects class
