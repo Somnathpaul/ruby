@@ -1,3 +1,5 @@
+# a program to hash existing password 
+
 require 'bcrypt'
 
 users = [
@@ -9,7 +11,7 @@ users = [
 ]
 
 # create hash password
-hash_password(password)
+def hash_password(password)
     BCrypt::Password.create(password)
 end
 
@@ -18,3 +20,13 @@ def verify_password(password)
     BCrypt::Password.new(password)
 end
 
+def convert(users)
+    users.each do |user|
+        user[:password] = hash_password(user[:password]) 
+    end
+    return users
+end
+
+# call the function
+a =  convert(users)
+puts a
