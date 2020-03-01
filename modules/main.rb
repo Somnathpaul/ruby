@@ -9,13 +9,12 @@ users = [
     {name: "net", password: "password5"}
 ]
 
-#puts "enter the user name"
-#user_name = gets.chomp
-#puts "enter password"
-#get_password = gets.chomp
-#p output = Crud.auth(user_name, get_password,users)
-
 # call the function
 a =  Crud.convert(users)
-puts a
-puts 
+
+# auth 
+output = puts "enter the user name"
+user_name = gets.chomp
+puts "enter password"
+get_password = gets.chomp
+p output = Crud.auth(user_name, get_password,users)
